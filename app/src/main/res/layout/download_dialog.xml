@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_bt_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--<TextView-->
+                <!--android:id="@+id/dialog_title"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:ellipsize="end"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:maxLines="4"-->
+                <!--android:text="正在下载新版本"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:textColor="#333333"-->
+                <!--android:textSize="20sp" />-->
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/progressView"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="180dp"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="vertical">-->
+
+                <com.jiangm.update.uptutil.CircleProgressBar
+                    android:id="@+id/progressbar"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center_horizontal"
+                    app:circle_color="#dddddd"
+                    app:circle_width="6dp"
+                    app:progress_color1="#f15353"
+                    app:progress_width="8dp"
+                    app:start_arc="90"
+                    app:max_progress="100"
+                    app:is_set_top_title="true"
+                    app:top_title="正在下载"
+                    app:top_title_text_size="15sp"
+                    app:top_title_color="#666666"
+                    app:is_set_mid_content="true"
+                    app:mid_progress_color="#f15353"
+                    app:current_progress_text_size="30sp"
+                    app:is_set_bottom_content="false"
+                    app:bottom_content=""
+                    app:bottom_content_text_size="15sp"/>
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+
+                >
+                <TextView
+                    android:id="@+id/dialog_cancel"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/circle_bt_gray"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="取消"
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/dialog_confirm"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/circle_bt"
+                    android:bottomRightRadius="5dp"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="确认"
+                    android:visibility="gone"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
